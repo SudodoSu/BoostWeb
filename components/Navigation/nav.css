@@ -5,23 +5,3 @@
   .active_nav {
     @apply font-titleBold;
   }
-
-  .btn {
-    @apply flex items-center gap-1 py-2 px-5 font-titleBold;
-  }
-
-.btn_hover:hover {
-    border-color: var(--orange);
-    -webkit-animation: pulse 1.2s;
-    animation: pulse 1.2s;
-    box-shadow: 0 0 0 10px transparent;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 #f86425;
-    }
-    100% {
-        box-shadow: transparent;
-    }
-}

@@ -29,7 +29,7 @@ function Nav() {
       }`}
     >
       <div className="flex w-full justify-between items-center px-0  lg:px-4 container">
-        <Link href="/" className=" block  w-[300px]">
+        <Link href="/" className=" block  w-[250px]">
           <Image
             src="/assets/images/BOOSTWEB_logo.png"
             alt="Boost Web - logo"

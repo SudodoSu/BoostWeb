@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-body_clr ${montserrat.variable} ${inter.variable} font-sans`}
+        className={`bg-black ${montserrat.variable} ${inter.variable} font-sans`}
       >
         {children}
       </body>
