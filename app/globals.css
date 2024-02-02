@@ -23,6 +23,10 @@ html {
   outline: none;
 }
 
+body {
+  @apply overflow-x-hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -54,7 +58,7 @@ h1 {
 }
 
 .btn2 {
-  @apply flex items-center gap-1 py-1.5 pl-1.5 pr-5 font-titleBold;
+  @apply flex items-center gap-4 py-1 pl-1 pr-5 font-titleBold;
 }
 
 .btn_hover:hover {
@@ -94,4 +98,22 @@ h1 {
     left: 20%; 
     bottom: 10%;
     background-color: #f86425; 
+}
+
+.before_sub::before,
+.before_sub::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #00B0DC;
+  position: absolute;
+  top: 50%;
+}
+
+.before_sub::before {
+  left: -25%;
+}
+
+.before_sub::after {
+  right: -25%;
 }

@@ -9,11 +9,11 @@ import { Autoplay } from "swiper/modules";
 
 function About() {
   return (
-    <section className="pt-[20rem]">
+    <section className="pt-12 " id="about">
       <div className="flex flex-col gap-8 text-white font-Montserrat">
         <div className="flex flex-col container">
-          <div className="blur_div_blue !bottom-[-10rem] !w-[250px] !left-[15rem] opacity-50"></div>
-          <div className="blur_div_orange !bottom-[-10rem] !w-[250px] !left-0 opacity-50 !bg-sec"></div>
+          <div className="blur_div_blue !bottom-[-20rem] !w-[250px] !left-[15rem] opacity-50"></div>
+          <div className="blur_div_orange !bottom-[-20rem] !w-[250px] !left-0 opacity-50 !bg-sec"></div>
           <p className="text-xl ">
             We're taking your digital strategy to the next level, together.
           </p>

@@ -3,12 +3,13 @@ import Link from "next/link";
 import React from "react";
 import "./homesection.css";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { IoIosArrowRoundDown } from "react-icons/io";
 
 function HomeSection() {
   return (
-    <section className="pt-20">
-      <div className="container relative flex">
-        <div className="flex flex-col items-start z-10 gap-4">
+    <section className="pt-32 pb-20">
+      <div className="container relative flex font-Montserrat">
+        <div className="flex flex-col items-start z-10 gap-10">
           <p className="text-xl text-white font-Montserrat">
             Our mantere is simple:
           </p>
@@ -25,6 +26,12 @@ function HomeSection() {
               <p className="font-Montserrat">Let's colaborate</p>
             </div>
           </Link>
+
+          <a href="#about">
+            <button className="p-4 bg-sec text-dark_blue border-grey border-[2px] border-solid rounded-full mt-40">
+              <IoIosArrowRoundDown size={30} />
+            </button>
+          </a>
         </div>
         <div className="absolute right-0">
           <div>
@@ -35,9 +42,27 @@ function HomeSection() {
               height={500}
             />
           </div>
-          <div className="blur_div_blue"></div>
-          <div className="blur_div_blue !bottom-0"></div>
-          <div className="blur_div_orange"></div>
+          <div className="">
+            <ul className="flex flex-col gap-4 justify-start items-end">
+              <li className="bg-black/40 border-grey border-[2px] border-solid rounded-full text-white py-1.5 px-3">
+                Digital
+              </li>
+              <li className="bg-black/40 border-grey border-[2px] border-solid rounded-full text-white py-1.5 px-3">
+                Design
+              </li>
+              <li className="bg-black/40 border-grey border-[2px] border-solid rounded-full text-white py-1.5 px-3">
+                Development
+              </li>
+              <li className="bg-black/40 border-grey border-[2px] border-solid rounded-full text-white py-1.5 px-3">
+                UI/UX Technologies
+              </li>
+            </ul>
+          </div>
+          <div className="blur_div_blue !right-[-20rem] !left-auto !bottom-auto top-[-10rem]"></div>
+          <div className="blur_div_blue !right-[-5rem] !left-auto !bottom-auto top-[0rem]"></div>
+          <div className="blur_div_blue !bottom-[20rem]"></div>
+          {/* <div className="blur_div_blue !bottom-0"></div> */}
+          {/* <div className="blur_div_orange"></div> */}
         </div>
       </div>
     </section>
