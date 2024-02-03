@@ -20,7 +20,7 @@ function About() {
           <div className="flex justify-between items-end">
             <h1>What we are up to</h1>
             <Link href="/" className="inline rounded-xl text-black ">
-              <div className="btn2 bg-sec rounded-full text-lg">
+              <div className="btn2 btn2_hover bg-sec rounded-full text-lg">
                 <div className="rounded-full bg-gradient-primary p-3">
                   <IoIosArrowRoundForward className="text-xl" />
                 </div>

@@ -19,7 +19,7 @@ function HomeSection() {
             <br /> Problem solving
           </h1>
           <Link href="/" className="inline rounded-xl">
-            <div className="btn2 bg-sec rounded-full text-lg">
+            <div className="btn2 btn2_hover bg-sec rounded-full text-lg">
               <div className="rounded-full bg-gradient-primary p-3">
                 <IoIosArrowRoundForward className="text-xl" />
               </div>
@@ -28,7 +28,7 @@ function HomeSection() {
           </Link>
 
           <a href="#about">
-            <button className="p-4 bg-sec text-dark_blue border-grey border-[2px] border-solid rounded-full mt-40">
+            <button className="p-4 bg-sec text-dark_blue border-grey border-[2px] border-solid rounded-full mt-40 btn2_hover">
               <IoIosArrowRoundDown size={30} />
             </button>
           </a>
