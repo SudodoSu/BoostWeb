@@ -4,38 +4,63 @@ import { TestimonialsContent } from "@/lib/Testimonials";
 import "swiper/css";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
+import "./testimonials.css";
+import { FaQuoteLeft } from "react-icons/fa";
 
 function Testimonials() {
   return (
-    <section>
+    <section className="pt-32">
       <div className="container">
-        <div>
-          <h2>What Our Clints Say</h2>
+        <div className="flex justify-center font-Montserrat mb-16">
+          <h2 className="text-sec text-4xl font-medium">
+            What our customers think
+          </h2>
         </div>
-        <div>
-          <Swiper
-            loop={true}
-            spaceBetween={10}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: true,
-            }}
-            effect={""}
-            modules={[Autoplay]}
-            slidesPerView={1}
-          >
-            {TestimonialsContent.images.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex justify-center flex-col bg-white/15 p-10 rounded-3xl gap-4">
-                  <h2 className="text-xl">{image.text}</h2>
-                  <div className="w-[50%]">
+
+        <Swiper
+          allowTouchMove={false}
+          loop={true}
+          autoplay={{
+            delay: 1,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          speed={4000}
+          modules={[Autoplay]}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+          className={`swiper-container-free-mode  `}
+        >
+          {TestimonialsContent.images.map((image, index) => (
+            <SwiperSlide key={index} className="swiper-wrapper">
+              <div
+                className={`flex justify-center flex-col bg-white/15 p-10 rounded-3xl
+                    `}
+              >
+                <div className="flex justify-between items-start mb-5">
+                  <div className="w-[100px] h-[100px] ">
                     <Image src={image.src} alt={image.alt} />
                   </div>
+                  <div>
+                    <FaQuoteLeft className="text-3xl" />
+                  </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+                <div className="text-sec">
+                  <h2 className="mb-5 text-xl font-Montserrat">{image.name}</h2>
+                  <p className="font-Inter">{image.text}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

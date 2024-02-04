@@ -7,7 +7,7 @@ import { IoIosArrowRoundDown } from "react-icons/io";
 
 function HomeSection() {
   return (
-    <section className="pt-32 pb-20">
+    <section className="pt-32 pb-20 overflow-hidden">
       <div className="container relative flex font-Montserrat">
         <div className="flex flex-col items-start z-10 gap-10">
           <p className="text-xl text-white font-Montserrat">

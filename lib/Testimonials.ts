@@ -15,6 +15,7 @@ import { StaticImageData } from "next/image";
 type LocationData = {
     src: StaticImageData;
     alt: string;
+    name: string;
     text: string;
   };
 
@@ -27,34 +28,44 @@ type LocationData = {
     images: [
         { src: one,
             alt: "Nft1",
-        text: "Web design and developments are great and so cheap>>>EFL", },
+        text: "Web design and developments are great and so cheap>>>EFL",
+    name: "Sanny Osborn", },
         { src: two,
             alt: "Nft2",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: three, 
             alt: "Nft3",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: four,
             alt: "Nft4",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: five,
             alt: "Nft5",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: six,
             alt: "Nft6",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: seven, 
             alt: "Nft7",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: eight,
             alt: "Nft8",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: nine,
             alt: "Nft9",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
         { src: ten,
             alt: "Nft10",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "Web design and developments are great and so cheap>>>EFL",
+        name: "Sanny Osborn", },
       // Add more images as needed
     ],
     // You can add more arrays or properties if needed

@@ -5,8 +5,8 @@ function HowItWorks() {
   return (
     <section className="pt-32">
       <div className="container text-white font-Montserrat">
-        <div className="mb-8 flex items-center justify-center flex-col relative">
-          <h2 className="text-4xl mb-2">How It Works</h2>
+        <div className="mb-16 flex items-center justify-center flex-col relative">
+          <h2 className="text-4xl mb-2 font-medium">How It Works</h2>
           <p className="before_sub text-lg  relative text-primary">
             3 Simple Steps to Go
           </p>
