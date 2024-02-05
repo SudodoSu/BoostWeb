@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, createContext, useContext } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import Popup from "./popup";
+import Popup from "./Popup";
 
 export type AppContextType = {
   openIndex: boolean;
