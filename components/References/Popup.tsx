@@ -14,21 +14,23 @@ interface PopupProps {
 function Popup({ title, image_src, alt, des }: PopupProps) {
   const { openIndex, setOpenIndex } = useGlobalContext();
   return (
-    <section className="inste-0 h-screen w-screen">
-      <div className="container !max-w-[600px] bg-sec rounded-3xl border-grey border-[2px] border-solid">
+    <section className="inset-0 h-screen w-screen fixed bg-black/50 flex items-center justify-center">
+      <div className="container !max-w-[800px] my-auto bg-sec rounded-3xl border-grey border-[2px] border-solid py-8 px-6 flex flex-col gap-6">
         <div>
-          <h2 className="text-3xl font-Montserrat font-medium">{title}</h2>
+          <h2 className="text-3xl font-Montserrat font-titleBold text-black">
+            {title}
+          </h2>
         </div>
         <div className="scrollable-content">
           <Image src={image_src} alt={alt} />
         </div>
         <div className="flex justify-between">
-          <p className="font-Inter">{des}</p>
+          <p className="font-Inter text-black">{des}</p>
           <button
             onClick={() => setOpenIndex(!openIndex)}
             className="inline rounded-xl"
           >
-            <div className="btn2 btn2_hover bg-sec rounded-full text-lg">
+            <div className="btn2 btn2_hover bg-black rounded-full text-lg">
               <div className="rounded-full bg-gradient-primary p-3">
                 <IoIosArrowRoundForward className="text-xl" />
               </div>
