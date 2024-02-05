@@ -25,7 +25,7 @@ function Popup({ title, image_src, alt, des }: PopupProps) {
         <div className="flex justify-between">
           <p className="font-Inter">{des}</p>
           <button
-            onClick={() => setOpenIndex(false)}
+            onClick={() => setOpenIndex(!openIndex)}
             className="inline rounded-xl"
           >
             <div className="btn2 btn2_hover bg-sec rounded-full text-lg">

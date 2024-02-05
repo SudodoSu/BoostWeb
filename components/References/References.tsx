@@ -27,8 +27,6 @@ function References() {
     setOpenIndex(!openIndex);
   };
 
-  console.log(openIndex);
-  console.log(activeIndex);
   return (
     <section className="pt-32">
       <div className="container flex flex-col gap-8 text-sec font-Montserrat">
