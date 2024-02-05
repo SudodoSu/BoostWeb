@@ -13,10 +13,8 @@ function HomeSection() {
           <p className="text-xl text-white font-Montserrat">
             Our mantere is simple:
           </p>
-          <h1 className="font-Montserrat text-8xl font-Bold text-white">
-            Inovate
-            <br /> some more
-            <br /> Problem solving
+          <h1 className="font-Montserrat text-8xl font-Bold leading-snug text-white">
+            Fuel Your <br /> Digital Evolution
           </h1>
           <Link href="/" className="inline rounded-xl">
             <div className="btn2 btn2_hover bg-sec rounded-full text-lg">
@@ -45,7 +43,7 @@ function HomeSection() {
           <div className="">
             <ul className="flex flex-col gap-4 justify-start items-end">
               <li className="bg-black/40 border-grey border-[2px] border-solid rounded-full text-white py-1.5 px-3">
-                Digital
+                SEO
               </li>
               <li className="bg-black/40 border-grey border-[2px] border-solid rounded-full text-white py-1.5 px-3">
                 Design
@@ -61,8 +59,6 @@ function HomeSection() {
           <div className="blur_div_blue !right-[-20rem] !left-auto !bottom-auto top-[-10rem]"></div>
           <div className="blur_div_blue !right-[-5rem] !left-auto !bottom-auto top-[0rem]"></div>
           <div className="blur_div_blue !bottom-[20rem]"></div>
-          {/* <div className="blur_div_blue !bottom-0"></div> */}
-          {/* <div className="blur_div_orange"></div> */}
         </div>
       </div>
     </section>

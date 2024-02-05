@@ -50,29 +50,23 @@ function Nav() {
 
               <li>
                 <Link href="#about" className="nav_list">
-                  about us
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#tokenomics" className="nav_list">
-                  tokenomics
+                  about
                 </Link>
               </li>
 
               <li>
                 <Link href="#nft" className="nav_list">
-                  nft
+                  Services
                 </Link>
               </li>
-
               <li>
-                <Link
-                  href="/assets/pdf/HalfShibaWhitepaper.pptx-1.pdf"
-                  target="_blank"
-                  className="nav_list"
-                >
-                  whitepaper
+                <Link href="#references" className="nav_list">
+                  references
+                </Link>
+              </li>
+              <li>
+                <Link href="#faq" className="nav_list">
+                  faq
                 </Link>
               </li>
             </ul>

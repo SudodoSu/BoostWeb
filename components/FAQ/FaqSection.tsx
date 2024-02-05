@@ -3,7 +3,7 @@ import Faq from "./Faq";
 
 function FaqSection() {
   return (
-    <section className="pt-32">
+    <section className="pt-32" id="faq">
       <div className="container">
         <div className="mb-16 flex items-center justify-center flex-col relative font-Montserrat">
           <div className="blur_div_blue !w-[250px] !left-auto right-0 !top-[10rem]  !blur-[150px]opacity-50"></div>

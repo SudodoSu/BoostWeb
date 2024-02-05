@@ -9,9 +9,12 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 function Testimonials() {
   return (
-    <section className="pt-32">
+    <section className="pt-32 ">
       <div className="container">
-        <div className="flex justify-center font-Montserrat mb-16">
+        <div className="flex justify-center font-Montserrat mb-16 relative">
+          <div className="blur_div_blue !w-[300px] !left-0 !top-[0rem]  !blur-[200px] opacity-50"></div>
+          <div className="blur_div_blue !w-[300px] !left-[-10rem]  !top-[10rem] !bg-sec  !blur-[200px] opacity-50"></div>
+          <div className="blur_div_orange !w-[250px] !left-auto right-0 !top-[30rem] !blur-[150px]  !bg-gradient-primary"></div>
           <h2 className="text-sec text-4xl font-medium">
             What our customers think
           </h2>

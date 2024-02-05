@@ -14,7 +14,7 @@ interface PopupProps {
 function Popup({ title, image_src, alt, des }: PopupProps) {
   const { openIndex, setOpenIndex } = useGlobalContext();
   return (
-    <section className="inset-0 h-screen w-screen fixed bg-black/50 flex items-center justify-center">
+    <section className="inset-0 h-screen w-screen fixed bg-black/50 flex items-center justify-center z-20">
       <div className="container !max-w-[800px] my-auto bg-sec rounded-3xl border-grey border-[2px] border-solid py-8 px-6 flex flex-col gap-6">
         <div>
           <h2 className="text-3xl font-Montserrat font-titleBold text-black">

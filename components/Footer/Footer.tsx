@@ -10,7 +10,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <footer className="mt-32 pt-10 pb-2.5">
+    <footer className="mt-32 pt-10 pb-2.5 relative">
       <div className="container flex flex-col">
         <div className="flex justify-between md:flex-row flex-col">
           <div className="md:w-4/12">
@@ -119,50 +119,13 @@ function Footer() {
             </ul>
           </div>
           <div className="md:w-2/12 flex flex-col gap-2 items-start">
-            <h3 className="text-[19.2px] font-Barlow text-clr_primary">
+            <h3 className="text-[19.2px] font-Barlow text-primary">
               Connect With Us
             </h3>
-            <button className="text-white">info@halfshib.io</button>
-            <ul className="flex gap-4">
-              <li className="w-[30.8px] h-[30.8px] bg-[#ffc53a] rounded">
-                <a
-                  href="https://t.me/HalfShibaInu"
-                  target="_blank"
-                  className="w-full h-full text-white flex justify-center items-center rounded"
-                >
-                  <FaTelegram className="w-[75%] h-[75%] text-white" />
-                </a>
-              </li>
-              <li className="w-[30.8px] h-[30.8px] bg-[#ffc53a] rounded">
-                <a
-                  href="https://twitter.com/HalfShibaInu"
-                  target="_blank"
-                  className="w-full h-full text-white flex justify-center items-center rounded"
-                >
-                  <FaTwitter className="w-[80%] h-[80%] text-white" />
-                </a>
-              </li>
-              <li className="w-[30.8px] h-[30.8px] bg-[#ffc53a] rounded">
-                <a
-                  href="https://etherscan.io/token/0x8Eb94A06b4716093DBfE335cbdb098DEb2dcdE1b"
-                  target="_blank"
-                  className="w-full h-full text-white flex justify-center items-center rounded"
-                >
-                  <SiEthereum className="w-[80%] h-[80%] text-white" />
-                </a>
-              </li>
-              <li className="w-[30.8px] h-[30.8px] bg-[#ffc53a] rounded">
-                <a
-                  href="https://discord.com/invite/halfshiba"
-                  target="_blank"
-                  className="w-full h-full text-white flex justify-center items-center rounded"
-                >
-                  <FaDiscord className="w-[80%] h-[80%] text-white" />
-                </a>
-              </li>
-            </ul>
+            <button className="text-white">info@boostweb.net</button>
           </div>
         </div>
+        <div className="blur_div_blue !w-[300px] !left-auto !right-0 !top-[0rem] !blur-[200px] opacity-50"></div>
         <hr className="h-[2px] border-none bg-white mt-[2%] mb-[3%]" />
         <div className="flex justify-center">
           <h2 className="text-white mb-4 font-Roboto text-base	text-[15px] sm:text-[16px]">
