@@ -27,7 +27,7 @@ type LocationData = {
     images: [
         { src: one,
             alt: "Nft1",
-        text: "Website design and development of Accommodation", },
+        text: "Barber Shop", },
         { src: two,
             alt: "Nft2",
             text: "Website design and development of Accommodation", },
