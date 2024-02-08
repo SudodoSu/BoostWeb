@@ -7,8 +7,6 @@ import five from "@/public/assets/images/BOOSTWEB_logo.png";
 import six from "@/public/assets/images/BOOSTWEB_logo.png";
 import seven from "@/public/assets/images/BOOSTWEB_logo.png";
 import eight from "@/public/assets/images/BOOSTWEB_logo.png";
-import nine from "@/public/assets/images/BOOSTWEB_logo.png";
-import ten from "@/public/assets/images/BOOSTWEB_logo.png";
 
 import { StaticImageData } from "next/image";
 
@@ -30,31 +28,25 @@ type LocationData = {
         text: "Barber Shop", },
         { src: two,
             alt: "Nft2",
-            text: "Website design and development of Accommodation", },
+            text: "Accommodations", },
         { src: three, 
             alt: "Nft3",
-            text: "Website design and development of Accommodation", },
+            text: "Restaurants", },
         { src: four,
             alt: "Nft4",
-            text: "Website design and development of Accommodation", },
+            text: "Night Clubs", },
         { src: five,
             alt: "Nft5",
-            text: "Website design and development of Accommodation", },
+            text: "Online Agency", },
         { src: six,
             alt: "Nft6",
-            text: "Website design and development of Accommodation", },
+            text: "Local Business", },
         { src: seven, 
             alt: "Nft7",
-            text: "Website design and development of Accommodation", },
+            text: "Portfolio Websites", },
         { src: eight,
             alt: "Nft8",
-            text: "Website design and development of Accommodation", },
-        { src: nine,
-            alt: "Nft9",
-            text: "Website design and development of Accommodation", },
-        { src: ten,
-            alt: "Nft10",
-            text: "Website design and development of Accommodation", },
+            text: "Online Stores", },
       // Add more images as needed
     ],
     // You can add more arrays or properties if needed
