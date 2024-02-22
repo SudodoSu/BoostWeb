@@ -126,6 +126,7 @@ function Footer() {
           </div>
         </div>
         <div className="blur_div_blue !w-[300px] !left-auto !right-0 !top-[0rem] !blur-[200px] opacity-50"></div>
+        <div className="blur_div_orange !w-[250px] !left-auto right-[15%] !top-[0rem] !blur-[150px]  !bg-gradient-primary"></div>
         <hr className="h-[2px] border-none bg-white mt-[2%] mb-[3%]" />
         <div className="flex justify-center">
           <h2 className="text-white mb-4 font-Roboto text-base	text-[15px] sm:text-[16px]">

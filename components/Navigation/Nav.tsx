@@ -5,8 +5,19 @@ import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import "./nav.css";
+import { usePathname } from "next/navigation";1
+
+const NavData = [
+  {title: "Home", path: "/"},
+  {title: "About", path: "/#about"},
+  {title: "Services", path: "/services/"},
+  {title: "References", path: "/#references"},
+  {title: "Faq", path: "/#faq"},
+]
 
 function Nav() {
+  const pathname = usePathname();
+  console.log(pathname)
   const [navBg, setNavBg] = useState<boolean>(false);
   const [hamburgerActive, setHamburgerActive] = useState<boolean>(false);
 
@@ -42,33 +53,13 @@ function Nav() {
         <div className="lg:flex hidden">
           <div className="flex gap-3 md:gap-5">
             <ul className="flex gap-8 items-center">
-              <li>
-                <Link href="#home" className={`nav_list active_nav`}>
-                  home
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#about" className="nav_list">
-                  about
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#nft" className="nav_list">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="#references" className="nav_list">
-                  references
-                </Link>
-              </li>
-              <li>
-                <Link href="#faq" className="nav_list">
-                  faq
-                </Link>
-              </li>
+              {NavData.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.path} className={`nav_list ${pathname === item.path ? "active_nav" : ""}`}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <div>
               <Link
@@ -87,56 +78,18 @@ function Nav() {
           {hamburgerActive && (
             <div className="lg:hidden inset-0 flex absolute justify-center w-screen h-screen items-center z-50 bg-black text-center">
               <ul className="flex flex-col gap-4 md:text-4xl origin-top">
-                <li>
-                  <Link
-                    onClick={() => setHamburgerActive(!hamburgerActive)}
-                    href="#home"
-                    className="nav_list active_nav"
-                  >
-                    home
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    onClick={() => setHamburgerActive(!hamburgerActive)}
-                    href="#about"
-                    className="nav_list"
-                  >
-                    about us
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    onClick={() => setHamburgerActive(!hamburgerActive)}
-                    href="#tokenomics"
-                    className="nav_list"
-                  >
-                    tokenomics
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    onClick={() => setHamburgerActive(!hamburgerActive)}
-                    href="#nft"
-                    className="nav_list"
-                  >
-                    nft
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    onClick={() => setHamburgerActive(!hamburgerActive)}
-                    href="/"
-                    target="_blank"
-                    className="nav_list"
-                  >
-                    whitepaper
-                  </Link>
-                </li>
+                {NavData.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      onClick={() => setHamburgerActive(!hamburgerActive)}
+                      href={item.path}
+                      className={`nav_list ${pathname === item.path? "active_nav" : ""}`}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+                
                 <li>
                   <Link
                     onClick={() => setHamburgerActive(!hamburgerActive)}
