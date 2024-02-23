@@ -4,22 +4,17 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import { IoMdArrowDropdown } from "react-icons/io";
 import "./nav.css";
-import { usePathname } from "next/navigation";1
-
-const NavData = [
-  {title: "Home", path: "/"},
-  {title: "About", path: "/#about"},
-  {title: "Services", path: "/services/"},
-  {title: "References", path: "/#references"},
-  {title: "Faq", path: "/#faq"},
-]
+import { usePathname } from "next/navigation";
+import {NavigationLinks} from "../../lib/Links"
 
 function Nav() {
   const pathname = usePathname();
-  console.log(pathname)
+  const [activeSection, setActiveSection] = useState<String>("#home");
   const [navBg, setNavBg] = useState<boolean>(false);
   const [hamburgerActive, setHamburgerActive] = useState<boolean>(false);
+  const [showServices, setShowServices] = useState<boolean>(false);
 
   const handleScroll = () => {
     window.scrollY > 0 ? setNavBg(true) : setNavBg(false);
@@ -53,9 +48,32 @@ function Nav() {
         <div className="lg:flex hidden">
           <div className="flex gap-3 md:gap-5">
             <ul className="flex gap-8 items-center">
-              {NavData.map((item, index) => (
-                <li key={index}>
-                  <Link href={item.path} className={`nav_list ${pathname === item.path ? "active_nav" : ""}`}>
+              {NavigationLinks.NavData.slice(0, 2).map((item, index) => (
+                <li key={index} className={`${activeSection === item.path ? "" : "hover_nav"}`}>
+                  <Link href={item.path} onClick={() => setActiveSection(item.path)} className={`nav_list ${activeSection === item.path ? "active_nav" : ""}`}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+              <li onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)} className="">
+                <Link href="/services" className="nav_list flex items-center">
+                  <span className={`${pathname.startsWith("/services") ? "active_services_nav" : ""} ${!pathname.startsWith("/services") && showServices ? "!font-PRegular active_services_nav" : "" }`}>Services</span> <IoMdArrowDropdown className={`transition duration-200 ${showServices ? "rotate-180" : ""}`}/>
+                </Link>
+
+                {showServices && 
+                (<ul className="absolute top-[90%] bg-sec py-4 rounded-lg flex flex-col gap-2">
+                  {NavigationLinks.Services.map((item, index) => (
+                    <li key={index}>
+                      <Link href={item.path} onClick={() => setActiveSection(item.path)} className={`services_list hover:bg-gray/30 text-black block ${pathname === item.path? "active_services" : ""}`}>
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>)}
+              </li>
+              {NavigationLinks.NavData.slice(2).map((item, index) => (
+                <li key={index} className="hover_nav">
+                  <Link href={item.path} onClick={() => setActiveSection(item.path)} className={`nav_list ${activeSection === item.path ? "active_nav" : ""}`}>
                     {item.title}
                   </Link>
                 </li>
@@ -74,7 +92,7 @@ function Nav() {
         </div>
 
         {/* Mobile Navigation */}
-        <nav className="lg:hidden flex">
+        {/* <nav className="lg:hidden flex">
           {hamburgerActive && (
             <div className="lg:hidden inset-0 flex absolute justify-center w-screen h-screen items-center z-50 bg-black text-center">
               <ul className="flex flex-col gap-4 md:text-4xl origin-top">
@@ -108,7 +126,7 @@ function Nav() {
               </div>
             </div>
           )}
-        </nav>
+        </nav> */}
 
         <div className="lg:hidden bg-clr_sec w-[38px] h-[38px] rounded flex justify-center">
           <button onClick={() => setHamburgerActive(!hamburgerActive)}>

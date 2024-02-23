@@ -28,7 +28,7 @@ function References() {
   };
 
   return (
-    <section className="pt-32" id="references">
+    <section className="pt-32 " id="references">
       <div className="container flex flex-col gap-8 text-sec font-Montserrat">
         <div className="mb-16 flex items-center justify-center flex-col relative">
           <h2 className="text-4xl mb-2 font-medium">Our Portfolio</h2>

@@ -1,7 +1,66 @@
 .nav_list {
-    @apply capitalize lg:capitalize text-white text-lg font-PRegular font-Montserrat py-[11px];
+    @apply capitalize lg:capitalize text-white text-lg font-PRegular font-Montserrat py-[11px] relative overflow-hidden;
   }
-  
+
+  .services_list {
+    @apply capitalize lg:capitalize text-white text-lg font-PRegular font-Montserrat px-3 py-1.5;
+  }
+
   .active_nav {
-    @apply font-titleBold;
+    @apply !font-titleBold relative;
+  }
+
+  .active_services {
+    @apply !font-titleBold bg-gray/30;
+  }
+
+  .hover_nav {
+    position: relative;
+  }
+
+
+  .hover_nav:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #E5E6E6;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 300ms ; 
+  }
+
+  .hover_nav:hover:after {
+    width: 100%;
+    opacity: 1;
+  }
+
+
+  .active_nav:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #E5E6E6;
+    margin:0;
+    position: absolute;
+    transition: width 200 ms ease-in-out;
+  }
+
+
+  .active_services_nav {
+    @apply !font-titleBold relative;
+  }
+
+  .active_services_nav:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #E5E6E6;
+    margin:0;
+    position: absolute;
+    transition: width 200 ms ease-in-out;
   }

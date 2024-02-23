@@ -9,7 +9,7 @@ import { Autoplay } from "swiper/modules";
 
 function About() {
   return (
-    <section className="pt-12 " id="about">
+    <section className="pt-12 scroll-m-16" id="about">
       <div className="flex flex-col gap-16 text-white font-Montserrat">
         <div className="flex flex-col container">
           <div className="blur_div_blue !bottom-[-20rem] !w-[250px] !left-[15rem] opacity-50 !blur-[150px]"></div>

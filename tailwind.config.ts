@@ -49,7 +49,7 @@ const config: Config = {
         orange: "#f86425",
         dark_blue: "#092742",
         sec_dark_blue: "#131a20",
-        grey: "#2c3842",
+        gray: "#2c3842",
         body_clr: "#141414",
       },
     },
