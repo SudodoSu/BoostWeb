@@ -14,7 +14,7 @@ function HowItWorks() {
         <div className="flex gap-5">
           {HowItWorksContent.images.map((image, index) => (
             <article key={index} className="w-1/3">
-              <div className="p-12 bg-grey rounded-3xl flex flex-col justify-center items-center gap-10 h-full">
+              <div className="p-12 bg-gray rounded-3xl flex flex-col justify-center items-center gap-10 h-full">
                 <div>
                   <Image src={image.src} alt={image.alt} />
                 </div>

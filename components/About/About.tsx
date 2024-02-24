@@ -61,7 +61,7 @@ function About() {
               <SwiperSlide key={index}>
                 {({ isActive }) => (
                   <div
-                    className={`flex justify-center flex-col bg-grey/30 p-10 rounded-3xl gap-4 ${
+                    className={`flex justify-center flex-col bg-gray/30 p-10 rounded-3xl gap-4 ${
                       isActive ? "!bg-black/40" : ""
                     }`}
                   >

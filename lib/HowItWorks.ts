@@ -22,16 +22,14 @@ type LocationData = {
         { src: one,
             alt: "Nft1",
             title: "We take your request",
-        text: "Web design and developments are great and so cheap>>>EFL", },
+        text: "To better grasp your target audience and business model, kindly fill out the form below to submit your request. Upon submission, our team will review the information provided. Once clarity is confirmed, you will receive an estimated completion date.", },
         { src: two,
             alt: "Nft2",
             title: "Our team starts designing and developing",
-            text: "Web design and developments are great and so cheap>>>EFL", },
+            text: "The design team develops a prototype and forwards it to the development team for implementation of functionality, resulting in the creation of a fully functional website.", },
         { src: three, 
             alt: "Nft3",
-            title: "You Got Design and Functional Website Based on Your Business Target",
-            text: "Web design and developments are great and so cheap>>>EFL", },
-      // Add more images as needed
+            title: "Receive Your Fully Functional Website",
+            text: "Receive a website with design and functionality meticulously aligned to your business objectives and target audience.", },
     ],
-    // You can add more arrays or properties if needed
   };

@@ -8,7 +8,7 @@ function FaqSection() {
         <div className="mb-16 flex items-center justify-center flex-col relative font-Montserrat">
           <div className="blur_div_blue !w-[250px] !left-auto right-0 !top-[10rem]  !blur-[150px]opacity-50"></div>
           <div className="blur_div_orange !w-[250px] !left-auto right-0 !top-[30rem] !blur-[150px]  !bg-gradient-primary"></div>
-          <div className="blur_div_orange !w-[250px] !left-auto right-[20rem] !top-[15rem] !blur-[150px]  !bg-grey"></div>
+          <div className="blur_div_orange !w-[250px] !left-auto right-[20rem] !top-[15rem] !blur-[150px]  !bg-gray"></div>
           <h2 className="text-4xl mb-2 text-sec font-medium">Faq</h2>
           <p className="text-lg before_sub after:!right-[-40%] before:!left-[-40%] relative text-primary">
             Still not sure

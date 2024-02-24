@@ -21,18 +21,28 @@
   }
   
   .content-placeholder {
-    padding: 10px;
+    padding: 20px;
     transform-origin: top center;
   }
 
   .question {
-    background: #E5E6E6;
-    border-radius: 50px;
+    background-image: linear-gradient(to left, #00B0DC , #2c3842 0%);
     color: white;
     cursor: pointer;
-    height: auto;
-    margin-bottom: 20px;
+    height: 60px;
     padding: 10px;
+    @apply flex items-center;
+  }
+
+
+  .question:not(:last-child){
+    @apply border-sec;
+    border-bottom: 1px solid;
+  }
+
+  .active_question{
+    background-image: linear-gradient(to left, #00B0DC , #2c3842 25%) !important;
+    transition: all 200ms ;
   }
 
   

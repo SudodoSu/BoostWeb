@@ -3,21 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoClose } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
 import "./nav.css";
 import { usePathname } from "next/navigation";
 import {NavigationLinks} from "../../lib/Links"
+import {motion} from "framer-motion"
 
 function Nav() {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<String>("#home");
-  const [navBg, setNavBg] = useState<boolean>(false);
+  const [navScrolled, setNavScrolled] = useState<boolean>(false);
   const [hamburgerActive, setHamburgerActive] = useState<boolean>(false);
   const [showServices, setShowServices] = useState<boolean>(false);
 
   const handleScroll = () => {
-    window.scrollY > 0 ? setNavBg(true) : setNavBg(false);
+    window.scrollY > 0 ? setNavScrolled(true) : setNavScrolled(false);
   };
 
   useEffect(() => {
@@ -30,8 +30,8 @@ function Nav() {
 
   return (
     <header
-      className={`lg:px-0 w-full h-16 fixed flex items-center justify-center z-40 ${
-        navBg ? "bg-black" : ""
+      className={`lg:px-0 w-full h-24 fixed flex items-center justify-center z-40 ${
+        navScrolled ? "scrolled" : "not_scrolled"
       }`}
     >
       <div className="flex w-full justify-between items-center px-0  lg:px-4 container">
@@ -45,7 +45,10 @@ function Nav() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="lg:flex hidden">
+        <motion.div 
+        initial={ {y: 100, opacity: 0}}
+        animate={ {y: 0, opacity: 1}}
+        className="lg:flex hidden">
           <div className="flex gap-3 md:gap-5">
             <ul className="flex gap-8 items-center">
               {NavigationLinks.NavData.slice(0, 2).map((item, index) => (
@@ -61,7 +64,7 @@ function Nav() {
                 </Link>
 
                 {showServices && 
-                (<ul className="absolute top-[90%] bg-sec py-4 rounded-lg flex flex-col gap-2">
+                (<ul className="absolute top-18 bg-sec py-4 rounded-lg flex flex-col gap-2">
                   {NavigationLinks.Services.map((item, index) => (
                     <li key={index}>
                       <Link href={item.path} onClick={() => setActiveSection(item.path)} className={`services_list hover:bg-gray/30 text-black block ${pathname === item.path? "active_services" : ""}`}>
@@ -79,7 +82,7 @@ function Nav() {
                 </li>
               ))}
             </ul>
-            <div>
+            <div className="flex items-center">
               <Link
                 href="/"
                 target="_blank"
@@ -89,7 +92,7 @@ function Nav() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Mobile Navigation */}
         {/* <nav className="lg:hidden flex">

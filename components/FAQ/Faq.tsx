@@ -16,21 +16,19 @@ const Accordion = ({
 }) => {
   const isOpen = i === expanded;
 
-  // By using `AnimatePresence` to mount and unmount the contents, we can animate
-  // them in and out while also only rendering the contents of open accordions
   return (
     <>
       <motion.article
         initial={false}
         animate={{ backgroundColor: isOpen ? "#E5E6E6" : "#2c3842" }}
         onClick={() => setExpanded(isOpen ? false : i)}
-        className="question"
+        className={`question ${isOpen ? "active_question" : ""}`}
       >
         {FaqQuestions.questions.map((item, index) => (
           <div key={index} className="text-xl">
             {i === index ? (
-              <h3 className={`${isOpen ? "text-black" : "text-sec"}`}>
-                {item.question}
+              <h3 className={`${isOpen ? "text-sec" : "text-sec"}`}>
+                    {item.question}
               </h3>
             ) : (
               ""
@@ -60,7 +58,7 @@ const Accordion = ({
               {FaqQuestions.questions.map((item, index) => (
                 <div key={index} className="">
                   {i === index ? (
-                    <p className="text-white">{item.answer}</p>
+                    <div className="text-black" dangerouslySetInnerHTML={{ __html: item.answer }} />
                   ) : (
                     ""
                   )}
@@ -75,12 +73,10 @@ const Accordion = ({
 };
 
 export const Faq = () => {
-  // This approach is if you only want max one section open at a time. If you want multiple
-  // sections to potentially be open simultaneously, they can all be given their own `useState`.
   const [expanded, setExpanded] = useState<false | number>(0);
 
   return (
-    <div className="mx-auto font-Inter">
+    <div className="mx-auto font-Inter bg-sec rounded-lg  overflow-hidden">
       {accordionIds.map((i) => (
         <Accordion i={i} expanded={expanded} setExpanded={setExpanded} />
       ))}
@@ -88,6 +84,6 @@ export const Faq = () => {
   );
 };
 
-const accordionIds = [0, 1, 2, 3];
+const accordionIds = [0, 1, 2, 3, 4];
 
 export default Faq;

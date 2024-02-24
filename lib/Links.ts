@@ -21,6 +21,6 @@ type LinksData = {
         {title: "Search Engine Optimization (SEO)", path: "/services/seo"},
         {title: "Image Processing and Gallery", path: "/services/image-gallery"},
         {title: "Google Maps Integratoin", path: "/services/map-integration"},
-        {title: "Bussines solutions", path: "/services/bussines-solutions"},
+        {title: "Business solutions", path: "/services/business-solutions"},
     ]
   };
